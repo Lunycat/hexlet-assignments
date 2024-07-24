@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class FileKVTest {
 
-    private static final Path filepath = Paths.get("src/test/resources/file").toAbsolutePath().normalize();
+    private static Path filepath = Paths.get("src/test/resources/file").toAbsolutePath().normalize();
 
     @BeforeEach
     public void beforeEach() throws Exception {
