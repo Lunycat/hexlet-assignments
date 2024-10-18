@@ -8,7 +8,7 @@ public final class App {
 
     public static Javalin getApp() {
         Javalin app = Javalin.create(c -> c.plugins.enableDevLogging());
-        app.get("/", context -> context.result("Hello World!"));
+        app.get("/welcome", context -> context.result("Welcome to Hexlet!"));
         return app;
     }
 
