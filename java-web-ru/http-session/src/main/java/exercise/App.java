@@ -17,7 +17,7 @@ public final class App {
         app.get("/users", context -> {
             var page = context.queryParamAsClass("page", Integer.class).getOrDefault(1);
             var per = context.queryParamAsClass("per", Integer.class).getOrDefault(5);
-            context.json(USERS.stream().skip((3L * page) - 3).limit(per).toList());
+            context.json(USERS.stream().skip((long) per * (page - 1)).limit(per).toList());
         });
 
         return app;
