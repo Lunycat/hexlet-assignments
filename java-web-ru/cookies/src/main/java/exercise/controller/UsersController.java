@@ -1,6 +1,5 @@
 package exercise.controller;
 
-import org.apache.commons.lang3.StringUtils;
 import exercise.util.Security;
 import exercise.model.User;
 import exercise.util.NamedRoutes;
