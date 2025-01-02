@@ -21,7 +21,6 @@ import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 public class EncodersConfig {
 
     @Autowired
-
     private RsaKeyProperties rsaKeys;
 
     @Bean
