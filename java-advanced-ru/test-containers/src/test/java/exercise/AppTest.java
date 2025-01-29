@@ -43,7 +43,7 @@ public class AppTest {
             .withInitScript("init.sql");
 
     @DynamicPropertySource
-    public void properties(DynamicPropertyRegistry registry) {
+    public static void properties(DynamicPropertyRegistry registry) {
         registry.add("spring.datasource.url", () -> postgres.getJdbcUrl());
         registry.add("spring.datasource.username", () -> postgres.getUsername());
         registry.add("spring.datasource.password", () -> postgres.getPassword());
@@ -78,5 +78,5 @@ public class AppTest {
         assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
         assertThat(response.getContentAsString()).contains("Jackson", "Bind");
     }
-    
+
 }
